@@ -96,3 +96,5 @@
 ### 1. יצירת סביבה וירטואלית (מומלץ)
 ```bash
 python -m venv env
+source env/bin/activate
+
