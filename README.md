@@ -63,10 +63,9 @@
 
 </div>
 
-
 ## 🏗️ ארכיטקטורה
 
-![Architecture Diagram](https://user-images.githubusercontent.com/placeholder/architecture.png)
+![Architecture Diagram](assets/architecture.svg)
 
 **תיאור זרימה:**
 1. המצלמה והחיישנים אוספים נתונים פיזיים  
