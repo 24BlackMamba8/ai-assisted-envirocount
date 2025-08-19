@@ -1,0 +1,89 @@
+
+
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <title>AI-Assisted EnviroCount Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS מותאם אישית -->
+    <link rel="stylesheet" href="../static/style.css">
+    <!-- Chart.js לגרפים -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>📊 AI-Assisted EnviroCount Dashboard</h1>
+
+    <div class="main-content">
+        <!-- אזור הוידאו המרכזי -->
+        <section class="video-section card">
+           <h2>מצלמת מעקב</h2>
+              <div class="video-container" style="position: relative;">
+                 <img src="{{ url_for('video_feed') }}" alt="Video Stream" style="width:100%;">
+                 <div id="recording-dot" style="display:none;"></div>
+               </div>
+               <div class="controls">
+                   <button id="record-btn" class="btn" onclick="toggleRecording()">📷 התחל הקלט</button>
+                   <button class="btn" onclick="saveFrame()">📷 שמור תמונה</button>
+                   <button class="btn" onclick="downloadAll()">⬇ הורד הכל כ-ZIP</button>
+               </div>
+
+       </section>
+
+        <!-- אזור המידע הצדדי והתחתון -->
+        <section class="info-section">
+            <div class="card sensor-card">
+                <h2>נתוני חיישנים</h2>
+                <p><strong>מרחק:</strong> <span id="distance">--</span> ס״מ</p>
+                <p><strong>מספר אנשים:</strong> <span id="people_count">--</span></p>
+                <canvas id="peopleChart" height="150"></canvas>
+            </div>
+
+            <div class="card graph-card">
+                <h2>גרף מרחק בזמן</h2>
+                <canvas id="distanceChart"></canvas>
+            </div>
+
+            <div class="card alerts-card" id="alerts-box">
+                <!-- התראות יתווספו כאן -->
+            </div>
+        <div class="card downloads-card">
+                <h2>📂 קבצים שמורים</h2>
+                <div id="captures-list" class="captures-list"></div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script src="../static/script.js"></script>
+
+<!-- Firebase SDK -->
+
+<!-- Firebase SDK - גרסה רגילה -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+
+<script>
+  // אתחול Firebase בגישה הקלאסית
+  const firebaseConfig = {
+    apiKey: "AIzaSyAnMx_E0pkycbF-bYPY_RWcp5UFEQZJJyk",
+    authDomain: "ai-assisted-envirocount.firebaseapp.com",
+    databaseURL: "https://ai-assisted-envirocount-default-rtdb.firebaseio.com",
+    projectId: "ai-assisted-envirocount",
+    storageBucket: "ai-assisted-envirocount.firebasestorage.app",
+    messagingSenderId: "574071131348",
+    appId: "1:574071131348:web:c8f16a68d1366eb933bf41",
+    measurementId: "G-6FPBLRFMHZ"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+  // עכשיו אפשר להשתמש ב-db לקריאה וכתיבה ב-Firestore
+</script>
+
+
+</body>
+</html>
+
