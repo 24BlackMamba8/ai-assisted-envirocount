@@ -1,5 +1,10 @@
 # AI-Assisted People Counting
 
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
+![OpenCV](https://img.shields.io/badge/OpenCV-Enabled-green)
+![Firebase](https://img.shields.io/badge/Firebase-RealtimeDB-orange)
+![Platform](https://img.shields.io/badge/Platform-Raspberry%20Pi-lightgrey)
+
 ![AIoT Banner](https://user-images.githubusercontent.com/placeholder/banner.png)
 *מערכת חכמה לניטור סביבתי מבוססת IoT ובינה מלאכותית – פרויקט אקדמי במדעי המחשב*
 
