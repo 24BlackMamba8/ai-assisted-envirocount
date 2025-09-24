@@ -70,7 +70,6 @@
 
 ## 🏗️ ארכיטקטורה
 
-![Architecture Diagram](assets/architecture.svg)
 
 **תיאור זרימה:**
 1. המצלמה והחיישנים אוספים נתונים פיזיים  
@@ -99,7 +98,23 @@
 ## 🚀 הרצת המערכת
 
 ### 1. יצירת סביבה וירטואלית (מומלץ)
-```bash
+# יצירת סביבה וירטואלית
 python -m venv env
-source env/bin/activate
+source env/bin/activate   # Linux/Mac
+env\Scripts\activate      # Windows
+
+# התקנת דרישות
+pip install -r requirements.txt
+
+# הרצת השרת
+python main.py
+
+
+
+קישורים
+
+מצגת הפרויקט  https://gamma.app/docs/qy1efa7h8ce65n7?following_id=n07s1c0zy3ax6y9&follow_on_start=true
+
+
+
 
